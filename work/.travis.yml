@@ -1,0 +1,35 @@
+#dist: xenial
+
+#sudo: false
+
+language: python
+cache:
+  - pip
+
+#language: python
+python:
+  - 2.7
+
+services:
+  - postgresql
+
+virtualenv:
+  system_site_packages: true
+
+before_install:
+  - sudo apt-get -qq update
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - cd fdm2
+  - cp .env.prod .env
+  - psql -c 'create database Employee;' -U postgres
+  - pip install -r requirements.txt
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
+
+script:
+  - python manage.py check
