@@ -1,19 +1,26 @@
-(0.013) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.004) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.011) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show HTTP/1.1" 200 1068
+"GET /emp HTTP/1.1" 200 811
+"POST /emp HTTP/1.1" 200 846
+"GET /emp HTTP/1.1" 200 812
+"GET /about.html HTTP/1.1" 200 493
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+"GET /main HTTP/1.1" 200 496
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1068
+"GET /emp HTTP/1.1" 200 811
+"POST /emp HTTP/1.1" 200 848
 (0.002) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -22,6 +29,42 @@
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) INSERT INTO "employee" ("eid", "ename", "eemail", "econtact") VALUES (1, 'Kiran', 'Kiran@qashack.com', '9964291404') RETURNING "employee"."id"; args=(1, u'Kiran', u'Kiran@qashack.com', u'9964291404')
+"POST /emp HTTP/1.1" 302 0
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /about.html HTTP/1.1" 200 493
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /contact.html HTTP/1.1" 200 492
+"GET /main.html HTTP/1.1" 200 496
+"GET /main.html HTTP/1.1" 200 496
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /main HTTP/1.1" 200 496
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /main.html HTTP/1.1" 200 496
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
 (0.002) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -29,53 +72,6 @@
             WHERE c.relkind IN ('r', 'v')
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.024) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
-(0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
-(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
-(0.081) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.023) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.016) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.006) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 (0.001) 
             SELECT c.relname, c.relkind
@@ -84,25 +80,7 @@
             WHERE c.relkind IN ('r', 'v')
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-ALTER TABLE "employee" ALTER COLUMN "eid" TYPE integer USING "eid"::integer; (params [])
-(0.296) ALTER TABLE "employee" ALTER COLUMN "eid" TYPE integer USING "eid"::integer; args=[]
-(0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.009) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('employee_app', '0002_auto_20180825_1032', '2018-08-25T05:06:44.688000+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('employee_app', u'0002_auto_20180825_1032', datetime.datetime(2018, 8, 25, 5, 6, 44, 688000, tzinfo=<UTC>))
-(0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('employee_app', '0003_auto_20180825_1034', '2018-08-25T05:06:44.709000+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('employee_app', u'0003_auto_20180825_1034', datetime.datetime(2018, 8, 25, 5, 6, 44, 709000, tzinfo=<UTC>))
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 (0.001) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -111,219 +89,29 @@ ALTER TABLE "employee" ALTER COLUMN "eid" TYPE integer USING "eid"::integer; (pa
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.029) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
-(0.021) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
 (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
 (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
 (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
 (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
 (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
 (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
 (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
 (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
-(0.009) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.010) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.008) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
-(0.004) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
-(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
-(0.013) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.005) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1297
-"GET /static/css/style.css HTTP/1.1" 200 2018
-"GET /static/images/demo.png HTTP/1.1" 200 846
-"GET /emp HTTP/1.1" 200 765
-(0.004) INSERT INTO "employee" ("eid", "ename", "eemail", "econtact") VALUES (1, 'q', 'q@gmail.com', 'q') RETURNING "employee"."id"; args=(1, u'q', u'q@gmail.com', u'q')
-"POST /emp HTTP/1.1" 302 0
-(0.004) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1324
-"GET /edit/6 HTTP/1.1" 301 0
-(0.004) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" WHERE "employee"."id" = 6; args=(6,)
-"GET /edit/6/ HTTP/1.1" 200 777
-(0.003) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1324
-(0.369) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.075) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.042) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show.html HTTP/1.1" 200 1324
-"GET /static/css/style.css HTTP/1.1" 200 2018
-"GET /static/images/demo.png HTTP/1.1" 200 846
-Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "C:\Users\Lab1\source\python_project\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
-Not Found: /favicon.ico
-"GET /favicon.ico HTTP/1.1" 404 1069
-"GET /emp HTTP/1.1" 200 765
-(0.010) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-"GET /emp HTTP/1.1" 200 765
-"GET /emp HTTP/1.1" 200 765
-(0.003) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1399
-(0.005) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1399
-"GET /emp HTTP/1.1" 200 765
-(0.004) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show HTTP/1.1" 200 1324
-"GET /emp HTTP/1.1" 200 761
-(0.013) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.011) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.004) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-"GET /emp HTTP/1.1" 200 806
-(0.006) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.014) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-"GET /emp HTTP/1.1" 200 808
-(0.009) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.007) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-"GET /emp HTTP/1.1" 200 809
-(0.009) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.009) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
 (0.003) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -331,6 +119,32 @@ Not Found: /favicon.ico
             WHERE c.relkind IN ('r', 'v')
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /static/images/demo.png HTTP/1.1" 200 846
+"GET /static/css/style.css HTTP/1.1" 200 2018
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /static/css/style.css HTTP/1.1" 200 2018
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 304 0
+(0.002) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /static/css/style.css HTTP/1.1" 304 0
+(0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 (0.002) 
             SELECT c.relname, c.relkind
@@ -340,34 +154,55 @@ Not Found: /favicon.ico
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.132) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
-(0.081) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
-(0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
-(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
-(0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
-(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
-(0.011) 
+(0.001) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
             LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
             WHERE c.relkind IN ('r', 'v')
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
+(0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221
+"GET /static/css/style.css HTTP/1.1" 304 0
+(0.000) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+"GET /show.html HTTP/1.1" 200 1221

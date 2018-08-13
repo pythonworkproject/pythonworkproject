@@ -30,11 +30,11 @@ def emp(request):
         form = EmployeeForm(request.POST)
         if form.is_valid():
             try:
-
-                form_id= self.instance.eid
-                print '-----------'
-                print form_id
-                print '-----------'
+                #
+                # form_id= self.instance.eid
+                # print '-----------'
+                # print form_id
+                # print '-----------'
 
                 # id_hidden = '<input type="hidden" id="form_id" value=' + str(form_id)  +' />'
                 form.save()
