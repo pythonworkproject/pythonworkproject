@@ -5,24 +5,28 @@ from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib import auth
 from django.core.exceptions import ObjectDoesNotExist
+from django.template import loader
+from django.http import HttpResponse
 
 from .forms import EmployeeForm
 from .models import Employee
 
-# @login_required
+# # @login_required
+# def main(request):
+#     # This is for display the Home Page
+#     return render(request, 'main.html')
+
 def main(request):
-    # This is for display the Home Page
-    return render(request, 'main.html')
+   template = loader.get_template('main.html') # getting our template
+   return HttpResponse(template.render())       # rendering the template in HttpResponse
 
 def about(request):
-    # This is for display the about Page
-    return render(request, 'about.html')
-
+   template = loader.get_template('about.html') # getting our template
+   return HttpResponse(template.render())       # rendering the template in HttpResponse
 
 def contact(request):
-    # This is for display the Contact Page
-    return render(request, 'contact.html')
-
+   template = loader.get_template('contact.html') # getting our template
+   return HttpResponse(template.render())       # rendering the template in HttpResponse
 
 # @login_required
 def emp(request):
@@ -30,13 +34,6 @@ def emp(request):
         form = EmployeeForm(request.POST)
         if form.is_valid():
             try:
-                #
-                # form_id= self.instance.eid
-                # print '-----------'
-                # print form_id
-                # print '-----------'
-
-                # id_hidden = '<input type="hidden" id="form_id" value=' + str(form_id)  +' />'
                 form.save()
                 return redirect('/show')
             except:
@@ -44,6 +41,7 @@ def emp(request):
     else:
         form = EmployeeForm()
     return render(request, 'index.html', {'form': form})
+
 
 # @login_required
 def show(request):
@@ -55,13 +53,13 @@ def show(request):
     return render(request, "show.html", {'employees': employees})
 
 # @login_required
-def edit(request, id):
-    employee = Employee.objects.get(id=id)
+def edit(request, eid):
+    employee = Employee.objects.get(eid=eid)
     return render(request, 'edit.html', {'employee': employee})
 
 # @login_required
-def update(request, id):
-    employee = Employee.objects.get(id=id)
+def update(request, eid):
+    employee = Employee.objects.get(eid=eid)
     form = EmployeeForm(request.POST, instance=employee)
     if form.is_valid():
         form.save()
@@ -69,10 +67,11 @@ def update(request, id):
     return render(request, 'edit.html', {'employee': employee})
 
 # @login_required
-def destroy(request, id):
-    employee = Employee.objects.get(id=id)
+def destroy(request, eid):
+    employee = Employee.objects.get(eid=eid)
     employee.delete()
     return redirect("/show")
+
 
 # For Searching
 # @login_required

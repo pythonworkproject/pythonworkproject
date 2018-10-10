@@ -21,6 +21,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'jquery',
 
+    'phonenumber_field',
+    
     # Name of the app
     'employee_app',
     'users'
@@ -74,7 +76,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'work_app',
+        'NAME': 'work_app2',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',

@@ -34,12 +34,12 @@
 
     <div class="topnav">
         <div class="header">
-            <a href="#" title="Employee_data"><img class="site-logo" src="static/images/demo.png" alt="Demo"></a>
+            <a href="#" title="Employee_data"><img class="site-logo" src="static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
         </div>
-        <a class="active" href="main.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="show.html">Employee portal</a>
-        <a href="contact.html">Contact</a>
+        <a class="active" href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
+        <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
+        <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
         <div class="search-container">
             <form>
                 <input type="text" id="search1" placeholder="Search…" value="" autocomplete="off" maxlength="240" class="f-input js-search-field">
@@ -81,10 +81,10 @@
                 <td>{{ employee.eemail }}</td>
                 <td>{{ employee.econtact }}</td>
                 <td>
-                    <a href="/edit/{{ employee.id }}">
+                    <a href="/edit/{{ employee.eid }}">
                         <button class="btn btn-success">Edit</button>
                     </a>
-                    <a href="/delete/{{ employee.id }}">
+                    <a href="/delete/{{ employee.eid }}">
                         <button class="btn btn-danger">Delete</button>
                     </a>
 

@@ -10,8 +10,13 @@ urlpatterns = [
     url('contact', views.contact, name='contact'),
     url('about', views.about, name='about'),
 
-    url('edit/(?P<id>\d+)/', views.edit, name="edit"),
-    url('update/(?P<id>\d+)/', views.update, name="update"),
-    url('delete/(?P<id>\d+)/', views.destroy, name="delete"),
+    url('edit/(?P<eid>\d+)/', views.edit, name="edit"),
+    url('update/(?P<eid>\d+)/', views.update, name="update"),
+    url('delete/(?P<eid>\d+)/', views.destroy, name="delete"),
     url(r'^search/$', views.search, name='search'),
 ]
+
+
+
+admin.site.site_header = 'Employee Site Panel'
+admin.site.site_title = 'Employee Login Panel'

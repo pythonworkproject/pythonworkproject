@@ -19,6 +19,12 @@ In Ascending order only.
 ### 11-08-2018
 Try to enter the details for employees in autoincrement
 
+### 13-08-2018
+create eid as autoincrement
+
+### 14-08-2018
+Install the angular cli and prepare a setup for building an application
+try with some login and logout pages for the project using angular cli
 
 
 
