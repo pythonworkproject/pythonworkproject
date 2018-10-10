@@ -10964,3 +10964,693 @@ Traceback (most recent call last):
 VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
 "GET /show HTTP/1.1" 200 1418
 "GET /static/images/logo.png HTTP/1.1" 304 0
+(0.007) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+"GET /static/images/logo.png HTTP/1.1" 304 0
+"GET /edit/9 HTTP/1.1" 301 0
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 9; args=(9,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/9/ HTTP/1.1" 200 791
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1082
+Exception while resolving variable 'eid' in template 'index.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [eid] in u'<tr><th><label for="id_ename">Ename:</label></th><td><input type="text" name="ename" required id="id_ename" maxlength="100" /></td></tr>\n<tr><th><label for="id_eemail">Eemail:</label></th><td><input type="email" name="eemail" required id="id_eemail" maxlength="254" /></td></tr>\n<tr><th><label for="id_econtact">Econtact:</label></th><td><input type="tel" name="econtact" id="id_econtact" /></td></tr>'
+"GET /emp HTTP/1.1" 200 766
+Exception while resolving variable 'eid' in template 'index.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [eid] in u'<tr><th><label for="id_ename">Ename:</label></th><td><input type="text" name="ename" value="a" required id="id_ename" maxlength="100" /></td></tr>\n<tr><th><label for="id_eemail">Eemail:</label></th><td><input type="email" name="eemail" value="a@gmail.com" required id="id_eemail" maxlength="254" /></td></tr>\n<tr><th><label for="id_econtact">Econtact:</label></th><td><ul class="errorlist"><li>Enter a valid phone number.</li></ul><input type="tel" name="econtact" value="dsdasasa" id="id_econtact" /></td></tr>'
+"POST /emp HTTP/1.1" 200 791
+Exception while resolving variable 'eid' in template 'index.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [eid] in u'<tr><th><label for="id_ename">Ename:</label></th><td><input type="text" name="ename" value="a" required id="id_ename" maxlength="100" /></td></tr>\n<tr><th><label for="id_eemail">Eemail:</label></th><td><input type="email" name="eemail" value="a@gmail.com" required id="id_eemail" maxlength="254" /></td></tr>\n<tr><th><label for="id_econtact">Econtact:</label></th><td><ul class="errorlist"><li>Enter a valid phone number.</li></ul><input type="tel" name="econtact" value="dsdasasa" id="id_econtact" /></td></tr>'
+"POST /emp HTTP/1.1" 200 787
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+(0.003) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1402
+(0.004) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1418
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.223) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+(0.153) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'phonenumber_field'; args=('phonenumber_field',)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
+(0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
+(0.004) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1418
+Exception while resolving variable 'eid' in template 'index.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [eid] in u'<tr><th><label for="id_ename">Ename:</label></th><td><input type="text" name="ename" required id="id_ename" maxlength="100" /></td></tr>\n<tr><th><label for="id_eemail">Eemail:</label></th><td><input type="email" name="eemail" required id="id_eemail" maxlength="254" /></td></tr>\n<tr><th><label for="id_econtact">Econtact:</label></th><td><input type="number" name="econtact" required id="id_econtact" /></td></tr>'
+"GET /emp HTTP/1.1" 200 771
+(0.001) INSERT INTO "employee" ("ename", "eemail", "econtact", "creation_time") VALUES ('a', 'a@gmail.com', 111, '2018-10-10T10:47:19.726000+00:00'::timestamptz) RETURNING "employee"."eid"; args=(u'a', u'a@gmail.com', 111, datetime.datetime(2018, 10, 10, 10, 47, 19, 726000, tzinfo=<UTC>))
+"POST /emp HTTP/1.1" 302 0
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1440
