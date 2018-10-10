@@ -76,7 +76,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'work_app2',
+        'NAME': 'work_app',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
