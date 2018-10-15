@@ -70,13 +70,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'work.wsgi.application'
 
+# # Email Configuration Setting
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'qashack2016@gmail.com'
+# EMAIL_HOST_PASSWORD = 'qashack@123'
+# EMAIL_USE_TLS = True
+
+# For sending from accounts
+# EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
+
 # For Emails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+
+
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'work_app',
+        'NAME': 'work_app1',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',

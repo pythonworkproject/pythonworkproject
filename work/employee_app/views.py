@@ -7,9 +7,18 @@ from django.contrib import auth
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import loader
 from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 
 from .forms import EmployeeForm
 from .models import Employee
+
+
+from django.http import HttpResponse
+from django.views.generic import View
+
+from employee_app.utils import render_to_pdf
+import datetime
 
 # # @login_required
 # def main(request):
@@ -48,8 +57,8 @@ def show(request):
     # Display all obj
     # employees = Employee.objects.all()
 
-    # by ordering
-    employees = Employee.objects.order_by('eid')
+    # by ordering it will display the records which is created recently
+    employees = Employee.objects.order_by('-eid')
     return render(request, "show.html", {'employees': employees})
 
 # @login_required
@@ -79,6 +88,7 @@ def search(request):
     if request.method == 'POST':
         srch = request.POST['srh']
         if srch:
+            # eid__icontains --> It's a case-insensitive containment test.
             match = Employee.objects.filter(Q(eid__icontains =srch) |
                                             Q(ename__icontains =srch)|
                                             Q(eemail__icontains=srch) |
@@ -87,10 +97,41 @@ def search(request):
             if match:
                 return render(request, 'show.html', {'employees': match})
             else:
-                messages.error(request, 'No Result' )
+                messages.error(request, 'No Result')
         else:
             return HttpResponseRedirect('/search/')
 
         return render(request, 'show.html')
 
 
+# Reference:  https://www.codingforentrepreneurs.com/blog/html-template-to-pdf-in-django/
+# Generate a PDF document
+def pdf_data(request, eid):
+    employee = Employee.objects.get(eid = eid)
+    pdf = render_to_pdf('pdf.html', {'employee':employee})
+    try:
+        return HttpResponse(pdf, content_type='application/pdf')
+    except:
+        return HttpResponse("Not found")
+
+# Force download the PDF
+# Reference:  https://www.codingforentrepreneurs.com/blog/html-template-to-pdf-in-django/
+class GeneratePDFForce(View):
+    def get(self, request, *args, **kwargs):
+        template = get_template('pdf.html')
+        context = {
+            "Data": "Employee information",
+            "today": "Today",
+        }
+        html = template.render(context)
+        pdf = render_to_pdf('pdf.html', context)
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            filename = "Invoice_%s.pdf" % ("12341231")
+            content = "inline; filename='%s'" % (filename)
+            download = request.GET.get("download")
+            if download:
+                content = "attachment; filename='%s'" % (filename)
+            response['Content-Disposition'] = content
+            return response
+        return HttpResponse("Not found")
