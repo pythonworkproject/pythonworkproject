@@ -97,7 +97,7 @@ def search(request):
             if match:
                 return render(request, 'show.html', {'employees': match})
             else:
-                messages.error(request, 'No Result')
+                messages.error(request, 'No Result' )
         else:
             return HttpResponseRedirect('/search/')
 
@@ -106,13 +106,11 @@ def search(request):
 
 # Reference:  https://www.codingforentrepreneurs.com/blog/html-template-to-pdf-in-django/
 # Generate a PDF document
-def pdf_data(request, eid):
+def generatepdf(request, eid):
     employee = Employee.objects.get(eid = eid)
     pdf = render_to_pdf('pdf.html', {'employee':employee})
-    try:
-        return HttpResponse(pdf, content_type='application/pdf')
-    except:
-        return HttpResponse("Not found")
+    return HttpResponse(pdf, content_type='application/pdf')
+
 
 # Force download the PDF
 # Reference:  https://www.codingforentrepreneurs.com/blog/html-template-to-pdf-in-django/

@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^search/$', views.search, name='search'),
 
     # Generate a PDF
-    url('pdf/(?P<eid>\d+)/', views.pdf_data, name='pdf'),
+    url('pdf/(?P<eid>\d+)/', views.generatepdf, name='pdf'),
     url('^pdfdownload', views.GeneratePDFForce.as_view(), name='pdfdownload'),
 ]
 

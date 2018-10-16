@@ -26,6 +26,9 @@ create eid as autoincrement
 Install the angular cli and prepare a setup for building an application
 try with some login and logout pages for the project using angular cli
 
+### 15-10-2018
+disabled the 'eid' field in the edit mode.
+
 
 
 
