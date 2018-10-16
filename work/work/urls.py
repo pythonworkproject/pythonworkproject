@@ -6,3 +6,6 @@ urlpatterns = [
     url(r'^', include('employee_app.urls')),
     url(r'^', include('users.urls')),
 ]
+
+admin.site.site_header = 'Web Site Panel'
+admin.site.site_title = 'Employee Site Panel '

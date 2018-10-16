@@ -30,7 +30,8 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Employee Id:</label>
                 <div class="col-sm-4">
-                    <input type="text" name="eid" id="id_eid" required maxlength="20" value="{{ employee.eid }}" />
+                    <!--{{ employee.eid }}-->
+                    <input type="text" name="eid" disabled="true" id="id_eid" required maxlength="20" value="{{ employee.eid }}" />
                 </div>
             </div>
 
@@ -58,7 +59,11 @@
             <div class="form-group row">
                 <label class="col-sm-1 col-form-label"></label>
                 <div class="col-sm-4">
-                    <button type="submit" class="btn btn-success">Update</button>
+                    <a href="/update/{{ employee.eid }}">
+                        <button class="btn btn-success">Update</button>
+                    </a>
+
+                    <!--<a href="/update/{{ employee.eid }}"> <button type="submit" class="btn btn-success">Update</button></a>-->
                     <a href="/show" class="btn btn-warning">Back</a>
                 </div>
             </div>

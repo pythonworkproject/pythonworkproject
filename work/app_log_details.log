@@ -1,4 +1,4 @@
-(0.031) 
+(0.003) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
             LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
@@ -6,6 +6,497 @@
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1339
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'pdf.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Internal Server Error: /pdf/10/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\views.py", line 111, in pdf_data
+    pdf = render_to_pdf('pdf.html', {'employee':employee})
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\utils.py", line 10, in render_to_pdf
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 97, in pisaDocument
+    encoding, context=context, xml_output=xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 59, in pisaStory
+    pisaParser(src, context, default_css, xhtml, encoding, xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\parser.py", line 753, in pisaParser
+    context.parseCSS()
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 500, in parseCSS
+    self.css = self.cssParser.parse(self.cssText)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 450, in parse
+    src, stylesheet = self._parseStylesheet(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 541, in _parseStylesheet
+    src, stylesheetImports = self._parseAtImports(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 625, in _parseAtImports
+    stylesheet = self.cssBuilder.atImport(import_, mediums, self)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\css.py", line 909, in atImport
+    return cssParser.parseExternal(import_)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 394, in parseExternal
+    cssFile = self.c.getFile(cssResourceName, relative=self.rootPath)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 818, in getFile
+    return getFile(name, relative or self.pathDirectory)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 738, in getFile
+    file = pisaFileObject(*a, **kw)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 644, in __init__
+    conn.request("GET", path)
+  File "C:\Python27\Lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\Lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\Lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\Lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "C:\Python27\Lib\httplib.py", line 859, in send
+    self.connect()
+  File "C:\Python27\Lib\httplib.py", line 1270, in connect
+    HTTPConnection.connect(self)
+  File "C:\Python27\Lib\httplib.py", line 836, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\Lib\socket.py", line 557, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+gaierror: [Errno 11004] getaddrinfo failed
+"GET /pdf/10/ HTTP/1.1" 500 19792
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'pdf.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /pdf/10/ HTTP/1.1" 200 1450
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'pdf.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Internal Server Error: /pdf/10/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\views.py", line 111, in pdf_data
+    pdf = render_to_pdf('pdf.html', {'employee':employee})
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\utils.py", line 10, in render_to_pdf
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 97, in pisaDocument
+    encoding, context=context, xml_output=xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 59, in pisaStory
+    pisaParser(src, context, default_css, xhtml, encoding, xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\parser.py", line 753, in pisaParser
+    context.parseCSS()
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 500, in parseCSS
+    self.css = self.cssParser.parse(self.cssText)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 450, in parse
+    src, stylesheet = self._parseStylesheet(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 541, in _parseStylesheet
+    src, stylesheetImports = self._parseAtImports(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 625, in _parseAtImports
+    stylesheet = self.cssBuilder.atImport(import_, mediums, self)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\css.py", line 909, in atImport
+    return cssParser.parseExternal(import_)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 394, in parseExternal
+    cssFile = self.c.getFile(cssResourceName, relative=self.rootPath)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 818, in getFile
+    return getFile(name, relative or self.pathDirectory)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 738, in getFile
+    file = pisaFileObject(*a, **kw)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 644, in __init__
+    conn.request("GET", path)
+  File "C:\Python27\Lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\Lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\Lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\Lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "C:\Python27\Lib\httplib.py", line 859, in send
+    self.connect()
+  File "C:\Python27\Lib\httplib.py", line 1270, in connect
+    HTTPConnection.connect(self)
+  File "C:\Python27\Lib\httplib.py", line 836, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\Lib\socket.py", line 557, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+gaierror: [Errno 11004] getaddrinfo failed
+"GET /pdf/10/ HTTP/1.1" 500 19790
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show.html HTTP/1.1" 200 1339
+"GET /about.html HTTP/1.1" 200 628
+"GET /main.html HTTP/1.1" 200 635
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show.html HTTP/1.1" 200 1339
+"GET /edit/10 HTTP/1.1" 301 0
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/10/ HTTP/1.1" 200 788
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/10/ HTTP/1.1" 200 795
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+"GET /update/10 HTTP/1.1" 301 0
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /update/10/ HTTP/1.1" 200 793
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.005) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /update/10/ HTTP/1.1" 200 802
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /update/10/ HTTP/1.1" 200 803
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1339
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/10/ HTTP/1.1" 200 799
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/10/ HTTP/1.1" 200 829
+(0.001) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'edit.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /edit/10/ HTTP/1.1" 200 830
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.004) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /update/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: update() takes exactly 2 arguments (1 given)
+"POST /update/ HTTP/1.1" 500 11017
+Internal Server Error: /update/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: update() takes exactly 2 arguments (1 given)
+"POST /update/ HTTP/1.1" 500 11019
+(0.004) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Internal Server Error: /update/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: update() takes exactly 2 arguments (1 given)
+"POST /update/ HTTP/1.1" 500 11019
+(0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /update/
+"POST /update/ HTTP/1.1" 404 1103
+(0.260) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.020) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'eid' in template 'index.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [eid] in u'<tr><th><label for="id_ename">Ename:</label></th><td><input type="text" name="ename" required id="id_ename" maxlength="100" /></td></tr>\n<tr><th><label for="id_eemail">Eemail:</label></th><td><input type="email" name="eemail" required id="id_eemail" maxlength="254" /></td></tr>\n<tr><th><label for="id_econtact">Econtact:</label></th><td><input type="number" name="econtact" required id="id_econtact" /></td></tr>'
+"GET /emp HTTP/1.1" 200 772
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 1105
+(0.060) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1339
+"GET /static/images/logo.png HTTP/1.1" 304 0
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'pdf.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Internal Server Error: /pdf/10/
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PythonEnv\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\views.py", line 111, in pdf_data
+    pdf = render_to_pdf('pdf.html', {'employee':employee})
+  File "D:\PythonEnv\pythonworkproject\work\employee_app\utils.py", line 10, in render_to_pdf
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 97, in pisaDocument
+    encoding, context=context, xml_output=xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\document.py", line 59, in pisaStory
+    pisaParser(src, context, default_css, xhtml, encoding, xml_output)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\parser.py", line 753, in pisaParser
+    context.parseCSS()
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 500, in parseCSS
+    self.css = self.cssParser.parse(self.cssText)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 450, in parse
+    src, stylesheet = self._parseStylesheet(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 541, in _parseStylesheet
+    src, stylesheetImports = self._parseAtImports(src)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 625, in _parseAtImports
+    stylesheet = self.cssBuilder.atImport(import_, mediums, self)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\w3c\css.py", line 909, in atImport
+    return cssParser.parseExternal(import_)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 394, in parseExternal
+    cssFile = self.c.getFile(cssResourceName, relative=self.rootPath)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\context.py", line 818, in getFile
+    return getFile(name, relative or self.pathDirectory)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 738, in getFile
+    file = pisaFileObject(*a, **kw)
+  File "D:\PythonEnv\venv\lib\site-packages\xhtml2pdf\util.py", line 644, in __init__
+    conn.request("GET", path)
+  File "C:\Python27\Lib\httplib.py", line 1057, in request
+    self._send_request(method, url, body, headers)
+  File "C:\Python27\Lib\httplib.py", line 1097, in _send_request
+    self.endheaders(body)
+  File "C:\Python27\Lib\httplib.py", line 1053, in endheaders
+    self._send_output(message_body)
+  File "C:\Python27\Lib\httplib.py", line 897, in _send_output
+    self.send(msg)
+  File "C:\Python27\Lib\httplib.py", line 859, in send
+    self.connect()
+  File "C:\Python27\Lib\httplib.py", line 1270, in connect
+    HTTPConnection.connect(self)
+  File "C:\Python27\Lib\httplib.py", line 836, in connect
+    self.timeout, self.source_address)
+  File "C:\Python27\Lib\socket.py", line 557, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+gaierror: [Errno 11004] getaddrinfo failed
+"GET /pdf/10/ HTTP/1.1" 500 19779
+(0.010) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1339
 (0.000) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -14,7 +505,15 @@
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.015) 
+(0.005) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
             LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
@@ -22,45 +521,30 @@
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
-(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
-(0.047) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
-(0.078) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
-(0.016) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
-(0.015) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
-(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
-(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
-(0.015) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
-(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bootstrap3'; args=('bootstrap3',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'widget_tweaks'; args=('widget_tweaks',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'jquery'; args=('jquery',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'employee' AND "django_content_type"."app_label" = 'employee_app'); args=('employee', 'employee_app')
-(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,)
-(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'employee_app'; args=('employee_app',)
-(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'login' AND "django_content_type"."app_label" = 'users'); args=('login', 'users')
-(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,)
-(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'users'; args=('users',)
-(0.032) 
+(0.010) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
             LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
             WHERE c.relkind IN ('r', 'v')
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
-(0.005) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
-(0.010) SELECT "employee"."id", "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact" FROM "employee" ORDER BY "employee"."eid" ASC; args=()
-"GET /show.html HTTP/1.1" 200 1297
-"GET /static/css/style.css HTTP/1.1" 304 0
-"GET /static/images/demo.png HTTP/1.1" 200 846
-Exception while resolving variable 'name' in template 'unknown'.
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" ORDER BY "employee"."eid" DESC; args=()
+Exception while resolving variable 'id' in template 'show.html'.
 Traceback (most recent call last):
-  File "C:\Users\Lab1\source\python_project\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
     (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
-Not Found: /favicon.ico
-"GET /favicon.ico HTTP/1.1" 404 1069
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+Exception while resolving variable 'id' in template 'show.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /show HTTP/1.1" 200 1339
+(0.003) SELECT "employee"."eid", "employee"."ename", "employee"."eemail", "employee"."econtact", "employee"."creation_time" FROM "employee" WHERE "employee"."eid" = 10; args=(10,)
+Exception while resolving variable 'id' in template 'pdf.html'.
+Traceback (most recent call last):
+  File "D:\PythonEnv\venv\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [id] in u'Employee object'
+"GET /pdf/10/ HTTP/1.1" 200 1451
