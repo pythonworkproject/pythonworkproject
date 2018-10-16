@@ -21,10 +21,12 @@ cycler==0.10.0
 Django==1.11.13
 django-admin-tools==0.8.1
 django-allauth==0.36.0
+django-apptemplates==1.4
 django-autocomplete-light==3.2.10
 django-autoslug-iplweb==1.9.4.dev0
 django-bootstrap3==10.0.1
 django-celery-beat==1.1.1
+django-constance==2.3.1
 django-debug-toolbar==1.9.1
 django-decouple==2.1
 django-jquery==3.1.0
@@ -91,6 +93,7 @@ python-openid==2.2.5
 pytz==2018.4
 PyVirtualDisplay==0.2.1
 PyYAML==3.13
+reportlab==3.5.9
 requests==2.19.1
 requests-oauthlib==1.0.0
 requirements-detector==0.6
@@ -105,6 +108,7 @@ snowballstemmer==1.2.1
 sqlparse==0.2.4
 tinycss2==0.6.1
 urllib3==1.23
+utils==0.9.0
 vine==1.1.4
 virtualenv==16.0.0
 WeasyPrint==0.42.3
@@ -112,3 +116,4 @@ webencodings==0.5.1
 whitenoise==3.3.1
 wkhtmltopdf==0.2
 wrapt==1.10.11
+xhtml2pdf==0.2.3
