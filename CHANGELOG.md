@@ -29,7 +29,11 @@ try with some login and logout pages for the project using angular cli
 ### 15-10-2018
 disabled the 'eid' field in the edit mode.
 
+### 16-10-2018
+Create a PDF document
 
+### 16-10-2018
+Create a login form 
 
 
 

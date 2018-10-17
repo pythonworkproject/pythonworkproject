@@ -34,12 +34,17 @@
 
     <div class="topnav">
         <div class="header">
-            <a href="#" title="Employee_data"><img class="site-logo" src="static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
+            <a href="#" title="Employee_data"><img class="site-logo" src="/static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
         </div>
         <a class="active" href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
         <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
         <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
         <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+
+        <form action="{% url 'home' %}" method="get">
+            <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red"></i></a>
+        </form>
+
         <div class="search-container">
             <form>
                 <input type="text" id="search1" placeholder="Search…" value="" autocomplete="off" maxlength="240" class="f-input js-search-field">

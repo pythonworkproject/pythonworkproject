@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!--css style-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -20,20 +19,32 @@
 
     <div class="topnav">
         <div class="header">
-            <a href="#" title="Employee_data"><img class="site-logo" src="static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
+            <a href="#" title="Employee_data"><img class="site-logo" src="/static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
         </div>
         <a class="active" href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
         <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
         <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
         <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        <form action="{% url 'home' %}" method="get">
+            <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red"></i></a>
+        </form>
     </div>
 
     <div style="padding-left:16px">
-        <h2>Login </h2>
-        <p></p>
+        <center>
+            <h2>Welcome to Employee Management System</h2>
+            <p>
+                <img src="/static/images/emp1.jpg" alt="Employee logo" width="500" height="333">
+            </p>
+        </center>
     </div>
 
+
     <div class="footer">
+
+        <a href="http://www.linkedin.com/pub/helen-sorrentino/12/53a/940" target="_new">
+          <img src="http://www.linkedin.com/img/webpromo/btn_viewmy_120x33.gif" width="120" height="33" border="0" alt="View Helen Sorrentino's profile on LinkedIn">
+        </a>
         <p>© copyright</p>
     </div>
 
