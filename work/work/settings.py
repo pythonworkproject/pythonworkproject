@@ -22,10 +22,14 @@ INSTALLED_APPS = [
     'jquery',
 
     'phonenumber_field',
-    
-    # Name of the app
+
+    # Name of the applications
     'employee_app',
-    'users'
+    'login_app',
+    'api',
+
+    # Django DRF rest framework
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -83,11 +87,6 @@ WSGI_APPLICATION = 'work.wsgi.application'
 # For Emails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-
-
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -127,14 +126,13 @@ USE_L10N = True
 USE_TZ = True
 
 REST_FRAMEWORK = {
-	'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
+    'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
 }
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
 
 LOGGING = {
     'version': 1,

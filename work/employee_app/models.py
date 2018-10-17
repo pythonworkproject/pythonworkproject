@@ -6,7 +6,6 @@ class Employee(models.Model):
     ename = models.CharField(max_length=100)
     eemail = models.EmailField()  
     # econtact = PhoneNumberField(blank=True)
-
     econtact = models.IntegerField()
     creation_time = models.DateTimeField(auto_now_add=True)
 
@@ -14,6 +13,7 @@ class Employee(models.Model):
     # eid = models.IntegerField()
     class Meta:
         db_table = "employee"
+
 
 
 
