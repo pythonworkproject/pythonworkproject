@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     # url('admin/', admin.site.urls),
+    url('contact', views.contact, name='contact'),
 ]

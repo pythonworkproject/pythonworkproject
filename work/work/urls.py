@@ -7,7 +7,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('employee_app.urls')),
     url(r'^', include('api.urls')),
-    # url(r'^', include('login_app.urls')),
 
     # url(r'^admin/', admin.site.urls),
     url(r'^login/', auth_views.login),
