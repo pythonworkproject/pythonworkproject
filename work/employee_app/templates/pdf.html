@@ -137,6 +137,13 @@ td {
         {% csrf_token %}
 
         <div class="container">
+            <div class="header">
+                <a href="#" title="Employee_data"><img class="site-logo" src="../static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
+            </div>
+            <div align="center">
+                <h2> Employee Information </h2>
+            </div>
+
             <br>
             <div class="form-group row">
                 <label class="col-sm-1 col-form-label"></label>
@@ -165,6 +172,11 @@ td {
                 </div>
             </div>
 
+        </div>
+
+        <div align="right">
+            {{ current_date }}
+            Report Generated on {% now "jS F Y H:i" %}
         </div>
 
         <div class="footer">
