@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     # Name of the applications
     'employee_app',
     'login_app',
-    'api',
 
     # Django DRF rest framework
     'rest_framework',
