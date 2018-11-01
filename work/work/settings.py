@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     # Name of the applications
     'employee_app',
     'login_app',
-    'api',
 
     # Django DRF rest framework
     'rest_framework',
@@ -117,7 +116,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

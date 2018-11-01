@@ -1,79 +1,70 @@
 {% load bootstrap3 %} {% load staticfiles %}
-
 <html lang="en">
-
-<head>
-    <title>Edit</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!--css style-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body>
-    <form method="POST" class="post-form" action="/update/{{employee.id}}">
-        {% csrf_token %}
-
-        <div class="container">
-            <br>
-            <div class="form-group row">
-                <label class="col-sm-1 col-form-label"></label>
-                <div class="col-sm-4">
-                    <h3>Update Details</h3>
+    <head>
+        <title>Edit</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--css style-->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+              <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+        <script type = "text/javascript">
+            $(document).ready(function(){
+                $('#table').DataTable();
+            });
+        </script>
+    </head>
+    <body>
+        <form method="POST" class="post-form" action="/update/{{employee.id}}">
+            {% csrf_token %}
+            <div class="container">
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <h3>Update Details</h3>
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Employee Id:</label>
-                <div class="col-sm-4">
-                    <!--{{ employee.eid }}-->
-                    <input type="text" name="eid" disabled="true" id="id_eid" required maxlength="20" value="{{ employee.eid }}" />
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Employee Id:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="eid" disabled="true" id="id_eid" value="{{ employee.eid }}" required maxlength="20" class="form-control mandatoryinput fontAndColor form-control  borderredcolor" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Employee Name:</label>
-                <div class="col-sm-4">
-                    <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}" />
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Employee Name:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}" class="form-control mandatoryinput fontAndColor form-control  borderredcolor" placeholder="Enter the Name" autocomplete="off" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Employee Email:</label>
-                <div class="col-sm-4">
-                    <input type="email" name="eemail" id="id_eemail" required maxlength="254" value="{{ employee.eemail }}" />
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Employee Email:</label>
+                    <div class="col-sm-4">
+                        <input type="email" name="eemail" id="id_eemail" required maxlength="100" value="{{ employee.eemail }}" class="form-control mandatoryinput fontAndColor form-control  borderredcolor" placeholder="Enter the Email" autocomplete="off" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Employee Contact:</label>
-                <div class="col-sm-4">
-                    <input type="text" name="econtact" id="id_econtact" required maxlength="15" value="{{ employee.econtact }}" />
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Employee Contact:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="econtact" id="id_econtact" required maxlength="100" value="{{ employee.econtact }}" class="form-control mandatoryinput fontAndColor form-control  borderredcolor" placeholder="Enter the Phone Number" autocomplete="off" />
+                    </div>
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-1 col-form-label"></label>
-                <div class="col-sm-4">
-                    <a href="/update/{{ employee.eid }}">
+                <div class="form-group row">
+                    <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <a href="/update/{{ employee.eid }}">
                         <button class="btn btn-success">Update</button>
-                    </a>
-
-                    <!--<a href="/update/{{ employee.eid }}"> <button type="submit" class="btn btn-success">Update</button></a>-->
-                    <a href="/show" class="btn btn-warning">Back</a>
+                        </a>
+                        <!--<a href="/update/{{ employee.eid }}"> <button type="submit" class="btn btn-success">Update</button></a>-->
+                        <a href="/show" class="btn btn-warning">Back</a>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        <div class="footer">
-            <p>© copyright</p>
-        </div>
-    </form>
-</body>
-
+            <div class="footer">
+                <p>© copyright</p>
+            </div>
+        </form>
+    </body>
 </html>

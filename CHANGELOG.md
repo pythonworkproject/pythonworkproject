@@ -35,5 +35,9 @@ Create a PDF document
 ### 16-10-2018
 Create a login form 
 
+### 31-10-2018
+Apply datatables for the templates
+
+
 
 

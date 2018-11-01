@@ -39,6 +39,7 @@ def contact(request):
 
 # @login_required
 def emp(request):
+    # obje = get_object_or_404(Employee, pk=id)
     if request.method == "POST":
         form = EmployeeForm(request.POST)
         if form.is_valid():
@@ -46,7 +47,7 @@ def emp(request):
                 form.save()
                 return redirect('/show')
             except:
-                pass
+                print("Please Enter the Data ")
     else:
         form = EmployeeForm()
     return render(request, 'index.html', {'form': form})
