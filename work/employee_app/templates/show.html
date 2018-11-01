@@ -1,165 +1,117 @@
 {% load bootstrap3 %} {% load staticfiles %}
-
 <html lang="en">
+   <head>
+      <title>Show Employee Records</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<head>
-    <title>Show Employee Records</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-    <!--Datatables-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!--css style-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!--Datatables-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-    <!--import from files-->
-    <script src="../static/build/js/intlTelInput.js"></script>
-    <link rel="stylesheet" href="../static/css/smartrec.css">
+      <!--css style-->
+       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+       <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
 
-    <!--<style>-->
-    <!--body {-->
-        <!--background-color:lightgrey;-->
-    <!--}-->
-    <!--</style>-->
+      <!--AJAX Code for DataTables below is the reference link-->
+      <!--https://www.sourcecodester.com/tutorials/python/11527/python-how-use-datatables-django.html-->
+      <script type = "text/javascript">
+         $(document).ready(function(){
+             $('#table').DataTable();
+         });
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="topnav">
+            <div class="header">
+               <a href="#" title="Employee_data"><img class="site-logo" src="/static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
+            </div>
+            <a class="active" href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
+            <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
+            <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <form action="{% url 'home' %}" method="get">
+               <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red"></i></a>
+            </form>
+         </div>
+          <br>
+         <button class="fab mrg_imp add-operator-btn " data-toggle="modal"   title="Add Employee"   data-target="#myModal">+</button>
 
-    <!--js import-->
-    <!--<script src="{% static 'js/myscripts.js' %}"></script>-->
+         <table id="table" class="table table-striped table-bordered table-sm">
+            <div>
+               {% if messages %}
+               <ul class="messages">
+                  {% for employee in messages%}
+                  <li style="color:red">{{ employee }}</li>
+                  {% endfor %}
+               </ul>
+               {% endif %}
+            </div>
+            <thead class="thead-dark">
+               <center>
+                  <h2> Employee Information </h2>
+               </center>
+               <tr>
+                  <th>Employee ID</th>
+                  <th>Employee Name</th>
+                  <th>Employee Email</th>
+                  <th>Employee Contact</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
 
-    <!--<script>-->
-        <!--$(document).ready(function() {-->
-            <!--$("#search1").on("keyup", function() {-->
-                <!--console.log("keyup")-->
-                <!--var value = $(this).val().toLowerCase();-->
-                <!--$("#employee1 tr").filter(function() {-->
-                    <!--$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)-->
-                <!--});-->
-            <!--});-->
-        <!--});-->
-    <!--</script>-->
+            <tbody id="employee1">
+               {% for employee in employees %}
+               <tr>
+                  <!--Line break   '|linebreaksbr'-->
+                  <td>{{ employee.eid }}</td>
+                  <td>{{ employee.ename }}</td>
+                  <td>{{ employee.eemail }}</td>
+                  <td>{{ employee.econtact }}</td>
+                  <td>
+                     <a href="/edit/{{ employee.eid }}">
+                     <button class="btn btn-success">Edit</button>
+                     </a>
+                     <a href="/delete/{{ employee.eid }}">
+                     <button class="btn btn-danger">Delete</button>
+                     </a>
+                     <a href="/pdf/{{ employee.eid }}">
+                     <button class="btn btn-Info">Export</button>
+                     </a>
+                  </td>
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+         <br>
+         <br>
+         <div class="form-group row">
+            <label class="col-sm-1 col-form-label"></label>
+            <div class="col-sm-4">
 
-    <!--AJAX Code for DataTables below is the reference link-->
-    <!--https://www.sourcecodester.com/tutorials/python/11527/python-how-use-datatables-django.html-->
-    <script type = "text/javascript">
-    $(document).ready(function(){
-        $('#table').DataTable();
-    });
-    </script>
-</head>
+               <!-- If you want to use modal feature -->
+               <div class="modal " id="myModal" role="dialog">
 
-<body>
-<div class="container">
-    <div class="topnav">
-        <div class="header">
-            <a href="#" title="Employee_data"><img class="site-logo" src="/static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
-        </div>
-        <a class="active" href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
-        <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
-        <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+               <center>
+                  <a href="/emp" class="btn btn-primary">Add New Record</a>
+                  <a href="/main" class="btn btn-warning">Back</a>
+               </center>
 
-        <form action="{% url 'home' %}" method="get">
-            <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red"></i></a>
-        </form>
-		
-		<!--<div class="gb_uf gb_of" gh="sb">-->
-			<!--<input class="gb_cf" aria-label="Search mail" autocomplete="off" placeholder="Search mail" value="" id="search1" type="text" -->
-			<!--dir="ltr" spellcheck="false" aria-haspopup="true" aria-live="off" aria-owns="gs_sbt50" aria-activedescendant="gs_ars50_5">-->
-		<!--</div>-->
-		
-		
-        <!--<div class="search-container">-->
-            <!--<form>-->
-                <!--<input type="text" id="search1" placeholder="Search…" value="" autocomplete="off" maxlength="240" class="f-input js-search-field">-->
-                <!--<button type="submit"><i class="fa fa-search"></i></button>-->
-            <!--</form>-->
-        <!--</div>-->
-    </div>
-
-    <table id="table" class="table table-striped table-bordered table-sm">
-        <div>
-            {% if messages %}
-            <ul class="messages">
-                {% for employee in messages%}
-                <li style="color:red">{{ employee }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
-
-        <thead class="thead-dark">
-
-        <center><h2> Employee Information </h2></center>
-                <!--<input name="upload[]" type="file" multiple/>-->
-            <tr>
-                <th>Employee ID</th>
-                <th>Employee Name</th>
-                <th>Employee Email</th>
-                <th>Employee Contact</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-
-        <tbody id="employee1">
-            {% for employee in employees %}
-            <tr>
-                <!--Line break   '|linebreaksbr'-->
-                <td>{{ employee.eid }}</td>
-                <td>{{ employee.ename }}</td>
-                <td>{{ employee.eemail }}</td>
-                <td>{{ employee.econtact }}</td>
-                <td>
-                    <a href="/edit/{{ employee.eid }}">
-                        <button class="btn btn-success">Edit</button>
-                    </a>
-
-                    <a href="/delete/{{ employee.eid }}">
-                        <button class="btn btn-danger">Delete</button>
-                    </a>
-
-
-                    <a href="/pdf/{{ employee.eid }}">
-                        <button class="btn btn-Info">Export</button>
-                    </a>
-
-                    <!--<a href="/pdf/{{ employee.eid }}">-->
-                        <!--<i class="fa fa-file-pdf-o"></i>-->
-                    <!--</a>-->
-
-                    <!--<a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>-->
-                    <!--<a href="/delete/{{ employee.id }}">Delete</a>-->
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <br>
-    <br>
-
-    <div class="form-group row">
-        <label class="col-sm-1 col-form-label"></label>
-        <div class="col-sm-4">
-            <a href="/emp" class="btn btn-primary">Add New Record</a>
-            <a href="/main" class="btn btn-warning">Back</a>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>© copyright</p>
-    </div>
-</div>
-</body>
-
+               <!--</div>-->
+            </div>
+         </div>
+         <div class="footer">
+            <p>© copyright</p>
+         </div>
+      </div>
+   </body>
 </html>

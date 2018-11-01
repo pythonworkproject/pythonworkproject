@@ -47,7 +47,7 @@ def emp(request):
                 form.save()
                 return redirect('/show')
             except:
-                pass
+                print("Please Enter the Data ")
     else:
         form = EmployeeForm()
     return render(request, 'index.html', {'form': form})

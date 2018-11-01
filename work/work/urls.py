@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^login/', auth_views.login),
     url(r'^logout/', auth_views.logout),
     url(r'^', include('login_app.urls'))
+
 ]
 
 
