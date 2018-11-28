@@ -1,4 +1,6 @@
 import os
+import django_heroku
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -7,8 +9,8 @@ SECRET_KEY = 'tlocp#9&e%&!4ff%jps%il5#dj0yz0a5o%e5acda%0mtj2i_ch'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'fierce-hollows-41528.herokuapp.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -188,3 +190,4 @@ LOGGING = {
 
 # LOGIN_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/main/'
+django_heroku.settings(locals())
