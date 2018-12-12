@@ -113,3 +113,10 @@ th,
 td {
 	border: 1px solid #72aec7;
 }
+
+.addemp{
+    color: #343a3f !important;
+    background-color: #faaf40 !important;
+    border-color: #faaf40 !important;
+    padding: 5px 15px 4px 14px !important;
+}

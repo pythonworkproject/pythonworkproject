@@ -1,16 +1,27 @@
 import os
-import django_heroku
+
+# import dj_database_url
+# import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from decouple import config
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'tlocp#9&e%&!4ff%jps%il5#dj0yz0a5o%e5acda%0mtj2i_ch'
-
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'fierce-hollows-41528.herokuapp.com']
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('postgres://jwsatdvqntptaa:a65d3e3244f1169280b4867128668e2e414c380229edc02ac6940fe688a34e2c@ec2-54-83-8-246.compute-1.amazonaws.com:5432/d7o6r46qdo2e3l')
+#     )
+# }
+
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'fierce-hollows-41528.herokuapp.com']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,6 +86,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'work.wsgi.application'
 
+
+
 # # Email Configuration Setting
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
@@ -131,10 +144,14 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
 }
 
+
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 LOGGING = {
     'version': 1,
@@ -190,4 +207,4 @@ LOGGING = {
 
 # LOGIN_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/main/'
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

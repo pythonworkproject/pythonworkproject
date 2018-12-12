@@ -8,6 +8,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.template import loader
 from django.http import HttpResponse
 from django.template.loader import get_template
+from django.urls import reverse
 from xhtml2pdf import pisa
 
 from .forms import EmployeeForm
@@ -67,14 +68,26 @@ def edit(request, eid):
     employee = Employee.objects.get(eid=eid)
     return render(request, 'edit.html', {'employee': employee})
 
-# @login_required
 def update(request, eid):
-    employee = Employee.objects.get(eid=eid)
-    form = EmployeeForm(request.POST, instance=employee)
-    if form.is_valid():
-        form.save()
-        return redirect("/show")
-    return render(request, 'edit.html', {'employee': employee})
+    print(request.POST)
+    id = request.POST.get('eid')
+    print(id)
+    try:
+        employee = Employee.objects.get(eid=eid)
+        print(employee)
+        employee.ename = request.POST['ename']
+        employee.eemail = request.POST['eemail']
+        employee.econtact = request.POST['econtact']
+        print("vjxhCAG")
+
+        employee.save()
+        print(employee.__dict__)
+    except:
+        import sys
+        print(str(sys.exc_info()), "dddddddddddddddd")
+    print(request.path_info)
+    return redirect("/show")
+
 
 # @login_required
 def destroy(request, eid):
