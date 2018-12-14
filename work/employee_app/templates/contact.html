@@ -2,36 +2,74 @@
 <html>
    <head>
       <title>Employee</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <meta charset="utf-8">
 
-      <!--css style-->
-      <link rel="stylesheet" href="{% static 'css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="icon" type="image/x-icon" href="/static/images/Capture.PNG">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Datatables-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--css style-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
+ <style>
+        #topbar {
+        background: #fff;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 12px;
+        color: #444;
+        font-family: 'Nunito Sans', sans-serif;
+}
+    </style>
    </head>
    <body>
+
+<section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o" style="color:#0098cd;"></i> <a href="mailto:sokkik@gmail.com">sokkik@gmail.com</a>
+        <i class="fa fa-phone" style="color:#0098cd;"></i> +91-9964291404
+      </div>
+      <div class="social-links float-right">
+        <a href="https://twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
       <div class="container">
          <div class="topnav">
             <div class="header">
                <a href="#" title="Employee_data"><img class="site-logo" src="/static/images/logo.png" height="39px" width="110px" alt="Demo"></a>
             </div>
             <a href="main.html"><i class="glyphicon glyphicon-home"></i> Home</a>
-            <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> ABOUT</a>
+            <a href="about.html" class="w3-padding w3-xlarge w3-teal"><i class=" "></i> About</a>
             <a href="show.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Employee portal</a>
-            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            <form action="{% url 'home' %}" method="get">
-               <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red"></i></a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
+              <form action="{% url 'home' %}" method="get" style=" float: right; ">
+                <a href="/home"><i class="fa fa-sign-out" style="font-size:26px;color:red" ></i></a>
             </form>
          </div>
-         <div style="padding-left:16px">
+        <div style="padding-left:16px">
             <h2>Contact </h2>
             <p></p>
+         </div>
+         <div>
+             Name: Kiran </br>
+             Phone Number : 9964291404 </br>
+             email : sokkik@gmail.com</br>
          </div>
          <div class="footer">
             <p>© copyright</p>

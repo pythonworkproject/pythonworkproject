@@ -51,7 +51,8 @@ def emp(request):
                 print("Please Enter the Data ")
     else:
         form = EmployeeForm()
-    return render(request, 'index.html', {'form': form})
+    # return render(request, 'index.html', {'form': form})
+    return redirect("/show")
 
 
 # @login_required
