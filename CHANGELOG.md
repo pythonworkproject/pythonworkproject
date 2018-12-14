@@ -38,6 +38,9 @@ Create a login form
 ### 31-10-2018
 Apply datatables for the templates
 
+### 31-10-2018
+Hosted on 'pythonanywhere' site
+http://pythonwork.pythonanywhere.com/
 
 
 
