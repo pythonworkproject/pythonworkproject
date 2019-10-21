@@ -18,7 +18,7 @@ configparser==3.5.0
 coverage==4.5.1
 cssselect2==0.2.1
 cycler==0.10.0
-Django==1.11.13
+Django==1.11.23
 django-admin-tools==0.8.1
 django-allauth==0.36.0
 django-apptemplates==1.4
