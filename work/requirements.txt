@@ -92,7 +92,7 @@ python-memcached==1.59
 python-openid==2.2.5
 pytz==2018.4
 PyVirtualDisplay==0.2.1
-PyYAML==3.13
+PyYAML==5.4
 reportlab==3.5.9
 requests==2.19.1
 requests-oauthlib==1.0.0
