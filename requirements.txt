@@ -27,7 +27,7 @@ django-autoslug-iplweb==1.9.4.dev0
 django-bootstrap3==10.0.1
 django-celery-beat==1.1.1
 django-constance==2.3.1
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-decouple==2.1
 django-jquery==3.1.0
 django-jsonfield==1.0.1
