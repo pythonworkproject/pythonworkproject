@@ -60,7 +60,7 @@ mccabe==0.6.1
 more-itertools==4.3.0
 numpy==1.15.2
 oauthlib==2.1.0
-opencv-python==3.4.3.18
+opencv-python==4.2.0.32
 pathlib2==2.3.2
 pdfkit==0.6.1
 pdfrw==0.4
