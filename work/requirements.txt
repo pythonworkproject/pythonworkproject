@@ -9,7 +9,7 @@ backports.pdb==1.0.2
 billiard==3.5.0.4
 cairocffi==0.9.0
 CairoSVG==1.0.22
-celery==4.2.0
+celery==5.2.2
 certifi==2018.4.16
 cffi==1.11.5
 chardet==3.0.4
